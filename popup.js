@@ -47,7 +47,7 @@ function setup() {
 
 
 function greet(){
-  console.log("submit button working");
+  // console.log("submit button working");
   let params = {
       active: true,
       currentWindow: true
@@ -55,8 +55,8 @@ function greet(){
   chrome.tabs.query(params, gotTabs);
   
   function gotTabs(tabs) {
-  console.log('got tabs');
-  console.log(tabs);
+  // console.log('got tabs');
+  // console.log(tabs);
   // send a message to the content script
   let message = [
                 cb_Education.checked(),
@@ -75,7 +75,7 @@ function greet(){
                 cb_HowtoStyle.checked(),
                 cb_NonprofitsActivism.checked()
                 ];
-  console.log("message sending");
+  // console.log("message sending");
   chrome.tabs.sendMessage(tabs[0].id, message);
   }
 }
