@@ -84,7 +84,7 @@ function greet(){
 
 
 
-function parse_set_on_popup(value){
+function parse_set_on_popup(value=[]){
   let categories_name = new Map([["Edu",1], ["Sci",1], ["Ent",1], ["Fil",1], ["Mus",1], ["Spo",1], ["Tra",1], ["Gam",1], ["Peo",1], ["Com",1], ["Aut",1], ["Pet",1], ["New",1], ["How",1], ["Non",1]]);
 
    
