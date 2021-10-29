@@ -34,15 +34,14 @@ function setup() {
     selectAll_button.mousePressed(parse_selectall);
 
 /// Code for Donate Button
-
-    button = createButton('Donate');
-   button.position(40, 150);
-   button.style('color:red');
-   button.size(80,40);
-   button.mousePressed(donate);
+    button = createButton('Feedback');
+    button.position(140, 200);
+    button.style('color:red');
+    button.size(100,40);
+    button.mousePressed(donate);
 
     function donate(){
-    window.open("https://github.com/igrigorik/videospeed");
+    window.open("https://forms.gle/bL5kWc3nnKnJdCdi7");
   }
 
 
