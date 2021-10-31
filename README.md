@@ -22,5 +22,4 @@ Soon this will be published on Google CHrome Webstore, Microsoft Edge Add-ons & 
 Feel free to open any issue or PR's for any feature suggestion or bug fixing. For any clarification or for any suggestions please fill out this [GForm](https://docs.google.com/forms/d/e/1FAIpQLSfJN5uz5FHbQXzZ0DK2XhBytrnHDTxPdNljOSeZFsmFJQz4HA/viewform).
 
 Anything else? Send us some :heart:
-yash.agarawal27@gmail.com, 
-vaibhav.garg237@gmail.com
+helpatfocus@gmail.com
