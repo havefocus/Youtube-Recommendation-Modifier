@@ -94,7 +94,7 @@ if (window.location.href == 'https://www.youtube.com/') {
       }
     }
     catch{
-      console.log(document.getElementById('contents').childNodes[i], "some error", i);
+      //console.log(document.getElementById('contents').childNodes[i], "some error", i);
       document.getElementById('contents').childNodes[i].style.display = 'none';
 
     }
