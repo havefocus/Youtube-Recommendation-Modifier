@@ -15,7 +15,7 @@
         "script": ["background_try.js"]
     },
 
-    "description": "Extension that gives power to the user to modify their YouTube Homepage Recommendation.",
+    "description": "Extension that allows user to modify/filter their YouTube Homepage Recommendation.",
 
     "browser_action":{
         "default_icon" : "icon.png",
