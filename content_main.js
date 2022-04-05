@@ -16,7 +16,14 @@ function store_data(request)
 let categories= {};
 // Read it using the storage API
 chrome.storage.sync.get(['data'], function(items) {
-  categories =  JSON.parse(items.data);
+  try
+  {
+    categories =  JSON.parse(items.data);
+  }
+  catch
+  {
+    categories = {'data' : 15}    // Used at inital bootup
+  }
   modify_page();
 });
 
@@ -25,9 +32,17 @@ let NewLength = 0;
 let OldLength = 0;
 async function modify_page()
 {
-  const elements =  document.querySelectorAll('.ytd-rich-grid-row');
-  OldLength = elements.length;
-  RemoveElements(elements)
+  let timer = setInterval(check, 1000);
+  function check()
+  {
+    const elements =  document.querySelectorAll('.ytd-rich-grid-row');
+    OldLength = elements.length;
+    if (OldLength != 0)
+    {
+      clearInterval(timer);
+      RemoveElements(elements)
+    }
+  }
 }
 
 
@@ -45,25 +60,34 @@ window.onscroll = function(e) {
 
 async function RemoveElements(elements)
 {
-  console.log(categories);
+  let sum = Object.values(categories).reduce((partialSum, a) => partialSum + a, 0);
   elements.forEach(item =>{
   let firstChild = item.firstElementChild;
   if( firstChild.id == "content")
   {
-    link = firstChild.firstElementChild.firstElementChild.firstElementChild.firstElementChild.href;
-    fetch(link)
-    .then((response) => response.text())
-    .then((text) => {
-      let category = (text.substring( text.search('"category"')+12 , text.search('"category"') +15));
-      if(!categories[category])
-      {
-        firstChild.style.display = 'none';
-        console.log(category)
-      }
-    })
-    .catch(
-      console.log("failed to fetch")
-    )
+    if (sum == 15)
+    {
+      console.log("All categories selected");
+    }
+    else if(sum == 0)
+    {
+      firstChild.style.display = 'none';
+    }
+    else
+    {
+      link = firstChild.firstElementChild.firstElementChild.firstElementChild.firstElementChild.href;
+      fetch(link)
+      .then((response) => response.text())
+      .then((text) => {
+        let category = (text.substring( text.search('"category"')+12 , text.search('"category"') +15));
+        if(!categories[category])
+        {
+          firstChild.style.display = 'none';
+        }
+      })
+      .catch(
+      )
+    }
   }
   })
 }

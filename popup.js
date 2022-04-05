@@ -1,21 +1,21 @@
 let categories = {};
 const boxes = document.querySelectorAll('.box');
 setup()
+
+
 function setup()
 {
-  try
-  {
-    chrome.storage.sync.get(['data'], function(items) {
+  chrome.storage.sync.get(['data'], function(items){
+    try{
       categories =  JSON.parse(items.data);
       boxes.forEach(box =>{
         box.checked = categories[box.id]
       })
-    });
-  }
-  catch
-  {
-    console.log("no storage exist");
-  }
+    }
+    catch{
+      console.log("no storage exist");
+    }
+  });
 
   boxes.forEach(box => {
     categories[box.id] = true;
@@ -48,9 +48,11 @@ function setup()
   function SendData()
   {
     chrome.tabs.query({active: true, currentWindow: true},  function(tabs) {
-       chrome.tabs.sendMessage(tabs[0].id, categories, function(response) {
-        console.log(response.farewell);
-      });
-    });
+       chrome.tabs.sendMessage(tabs[0].id, categories)
+       .then(response =>{
+         console.log(response.response);
+       }).catch(console.log("some error"));
+    }
+    );
   }
 }

@@ -6,7 +6,7 @@
         {
             "matches":
         [
-            "<all_urls>"
+            "*://*.youtube.com/"
         ],
             "js" : ["content_main.js"]
         }
