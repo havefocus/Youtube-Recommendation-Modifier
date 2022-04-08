@@ -43,12 +43,43 @@ body {
     font-size: 15px;
     font-weight: bold;
     border-radius: 10px;
+    border: 1px solid black;
+    border: 0px;
     background-color: rgb(162, 187, 191);
-
-
+    background-color: #E6BA95;
 }
 
+
+.button:hover
+{
+    background-color: #ebd5c4;
+}
+
+.button:active
+{
+    background-color: #da955d;
+}
+
+.message
+{
+    font-weight: bold;
+}
 .footer
 {
     text-align: center;
+}
+
+.links
+{
+    width: 50%;
+    font-style: italic;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.test
+{
+    font-size: 20px;
+    color: white;
 }

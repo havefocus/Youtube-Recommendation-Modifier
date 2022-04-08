@@ -4,10 +4,7 @@
     "version" : "1.0",
     "content_scripts" : [
         {
-            "matches":
-        [
-            "*://*.youtube.com/"
-        ],
+            "matches" : ["*://*.youtube.com/"],
             "js" : ["content_main.js"]
         }
     ],
@@ -26,7 +23,6 @@
         "128" : "icon.png" 
     },
     "permissions": [
-        
         "storage",
         "tabs"
       ]
