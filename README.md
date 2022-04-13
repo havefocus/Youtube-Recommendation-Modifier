@@ -16,7 +16,7 @@ As of now the extension only works on the YouTube Homepage. We are continuously 
 # Hacking Around
 Just clone this repo and on your browser go to extensions and enable developer  mode and tap 'Load Unpacked' and select the cloned repo to test our beta version.
 
-Soon this will be published on Google CHrome Webstore, Microsoft Edge Add-ons & Firefox Add-ons.
+Soon this will be published on Google Chrome Webstore, Microsoft Edge Add-ons & Firefox Add-ons.
 
 # Contributor Guidelines
 Feel free to open any issue or PR's for any feature suggestion or bug fixing. For any clarification or for any suggestions please fill out this [GForm](https://docs.google.com/forms/d/e/1FAIpQLSfJN5uz5FHbQXzZ0DK2XhBytrnHDTxPdNljOSeZFsmFJQz4HA/viewform).
