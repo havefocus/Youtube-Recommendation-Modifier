@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Youtube Recommendation Modifier </title>
 <script src = "popup.js" type="text/javascript" defer></script>  
 <link rel="stylesheet" href="style.css">
@@ -86,9 +89,18 @@
             </div>
         </div>
         <div class="links">
-            <a href="https://github.com/" target="_blank">Contribute</a>
+            <a href="https://github.com/havefocus/Youtube-Recommendation-Modifier" target="_blank">Github</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJN5uz5FHbQXzZ0DK2XhBytrnHDTxPdNljOSeZFsmFJQz4HA/viewform" target="_blank">Feedback</a>
         </div>
+        <div class="donate-button">
+            <a href="https://rzp.io/l/YoutubeRecommendationModifier" target="_blank"><button class="donate"><img class="images" src="img.png"></button></a>
+            <form method="POST" action="https://mainnet.demo.btcpayserver.org/api/v1/invoices" class="btcpay-form btcpay-form--block"  target="_blank">
+            <input type="hidden" name="storeId" value="H1t3wLGtuWkRCSDMV15ph7Ur9PdEK1UdZhTwYch8MCqz" />
+            <input type="hidden" name="notifyEmail" value="helpatfocus@gmail.com" />
+            <input type="hidden" name="currency" value="USD" />
+            <input type="image" class="submit" name="submit" src="https://mainnet.demo.btcpayserver.org/img/paybutton/pay.svg" style="width:110px; border-radius:5px" alt="Pay with BTCPay Server, a Self-Hosted Bitcoin Payment Processor">
+        </div>
     </div>
+</form>
 </body>
 </html>
