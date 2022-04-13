@@ -55,4 +55,16 @@ function setup()
     }
     );
   }
+
 }
+
+function onSetURL() {
+  console.log("set uninstall URL");
+}
+
+function onError(error) {
+  console.log(`Error: ${error}`);
+}
+
+let settingUrl = chrome.runtime.setUninstallURL("https://docs.google.com/forms/d/e/1FAIpQLSfJN5uz5FHbQXzZ0DK2XhBytrnHDTxPdNljOSeZFsmFJQz4HA/viewform");
+settingUrl.then(onSetURL, onError);
